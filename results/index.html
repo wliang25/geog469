@@ -43,6 +43,7 @@ title: US Distribution of Police Involved Fatalities
 	<script src="fatalencounters.js"></script>
 	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script> 
 	<div id="map" style="width: 600px; height: 400px;"></div>
+	<button onclick="plain()">Base Layer</button>
 	<button onclick="cases()">Cases Per Capita</button>
 	<button onclick="analysis()">Hot Spot Analysis</button>
 	<script>
@@ -100,6 +101,13 @@ title: US Distribution of Police Involved Fatalities
 		function analysis(){
 			analysisLegend.addTo(map);
 			hotSpotLayer.addTo(map);
+			map.removeLayer(casesPerCapLayer);
+			map.removeControl(capitaLegend);
+		}
+
+		function analysis(){
+			map.removeLayer(hotSpotLayer);
+			map.removeControl(analysisLegend);
 			map.removeLayer(casesPerCapLayer);
 			map.removeControl(capitaLegend);
 		}
