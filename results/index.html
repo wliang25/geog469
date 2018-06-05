@@ -94,14 +94,14 @@ title: US Distribution of Police Involved Fatalities
 			capitaLegend.addTo(map);
 			casesPerCapLayer.addTo(map);
 			map.removeLayer(hotSpotLayer);
-			map.removeLayer(analysisLegend);
+			map.removeControl(analysisLegend);
 		}
 			
 		function analysis(){
 			analysisLegend.addTo(map);
 			hotSpotLayer.addTo(map);
 			map.removeLayer(casesPerCapLayer);
-			map.removeLayer(capitaLegend);
+			map.removeControl(capitaLegend);
 		}
 		
 		//Add capita legend
