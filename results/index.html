@@ -95,7 +95,7 @@ title: US Distribution of Police Involved Fatalities
 		//Add buttons and legend to map
 		var casesPerCapLayer = L.geoJson(perCap,{style:myStyle})
 		var hotSpotLayer = L.geoJson(perCap,{style:densityStyle})
-		L.geogJson.addTo(map); //Adds the county boundaries
+		L.geogJson(perCap).addTo(map); //Adds the county boundaries
 
 		function cases(){
 			capitaLegend.addTo(map);
